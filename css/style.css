@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    background-color: burlywood;
+
+    display: grid;
+    place-items: center;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+/* custom styles */
+.machine{
+    width: 100%;
+    max-width: 375px;
+    /* height: 500px; */
+    background-color: #fff;
+
+    /* border: 2px solid #000; */
+    border-radius: 10px;
+
+    padding:  20px;
+
+    position: relative;
+    box-shadow:  0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 10px;
+    font-family: cursive;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #444;
+
+
+    padding-bottom: 10px;
+}
+
+.fruit-container{
+    width: 100%;
+    /* background-color: rgb(224, 236, 252); */
+
+    display: grid;
+    grid-template-columns: repeat(4,71px);
+    grid-template-rows: repeat(2, 80px);
+    grid-gap: 10px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+
+    /* outline: 1px solid #999; */
+}
+
+.btn-fruit{
+    /* background-image: linear-gradient(to bottom,#fff,rgb(224, 236, 252)); */
+    font-size: 35px;
+
+    /* padding: 5px 0; */
+
+    border-radius: 10px;
+    /* outline: 1px solid rgba(0, 0, 0, 0.1); */
+
+    /* box-shadow: inset 0 -2px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2); */
+    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-fruit:hover:not(.selected){
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+.btn-fruit .fruit{
+    padding: 5px;
+    /* background-color: red; */
+
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.price{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.btn-fruit:hover:not(.selected) .fruit{
+    position: absolute;
+    transform: scale(1.2);
+}
+
+.btn-fruit:hover:not(.selected) .price{
+    opacity: 0;
+}
+
+.btn-fruit.selected .fruit{
+    /* position: absolute; */
+    transform: scale(0.9);
+}
+
+.btn-fruit.selected{
+    /* outline: 2px solid rgb(43, 79, 109); */
+    box-shadow: none;
+    box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+hr{
+    border-width: 0.5px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.display{
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+
+    text-align: center;
+    word-spacing: 15px;
+
+    margin: 20px 0;
+    padding: 20px 10px;
+
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.btn-buy{
+    width: 100%;
+    background-color: rgb(43, 79, 109);
+    color: #fff;
+
+    padding: 10px;
+
+    border-radius: 10px;
+    /* outline: 1px solid #999; */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
